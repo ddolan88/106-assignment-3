@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/6f3561dfdf.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Task Manager</title>
+  </head>
+  <body>
+    <h1 class="project-title">my task manager<button type="button" class="btn btn-dark hide-form" id="hide-form-btn">
+      Add Task
+    </button></h1>
+    
+
+    <main class="main-content container-fluid">
+      <section class="list">
+        <h3>Your Pending Task</h3>
+        <div id="task-list"></div>
+      </section>
+
+      <section class="form" id="task-form">
+        <h3>Task info</h3>
+
+        <div class="my-field">
+          <label>Title</label>
+          <input type="text" class="form-control" type="text" id="txtTitle" />
+        </div>
+        <div class="my-field">
+          <label>Important</label>
+          <i id="iImportant" class="far fa-star"></i>
+        </div>
+        <div class="my-field">
+          <label>Description:</label>
+          <input type="text" id="txtDesc" class="form-control">
+        </div>
+        <div class="my-field">
+          <label>Duration</label>
+          <input
+            type="text"
+            class="form-control"
+            type="number"
+            id="txtDuration"
+          />
+        </div>
+        <div class="my-field">
+          <label>Deadline</label>
+          <input
+            type="text"
+            class="form-control"
+            type="datetime-local"
+            id="txtDeadline"
+          />
+        </div>
+        <div class="my-field">
+          <label>Location</label>
+          <input
+            type="text"
+            class="form-control"
+            type="text"
+            id="txtLocation"
+          />
+        </div>
+        <div class="my-field">
+          <label>Status</label>
+          <select class="form-select" id="txtStatus">
+            <option disabled selected value="-1">--Select an option--</option>
+            <option value="New">New</option>
+            <option value="Incomplete">In progress</option>
+            <option value="Blocked">Blocked</option>
+            <option value="Completed">Completed</option>
+            <option value="Removed">Removed</option>
+          </select>
+        </div>
+        <div>
+          <button type="button" class="btn btn-dark" id="saveTask">
+            Save Task
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/test1.js"></script>
+    <script src="./js/task.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
